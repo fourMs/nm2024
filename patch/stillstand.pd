@@ -1,47 +1,36 @@
-#N canvas 360 175 1330 783 12;
+#N canvas 360 175 3840 1980 12;
 #X obj 90 599 dac~;
 #X obj 89 571 *~;
-#X obj 110 519 hsl 170 20 0.01 1 1 0 empty empty empty -2 -10 0 12
-#fcfcfc #000000 #000000 12500 1 0 1;
-#X floatatom 110 546 5 0 0 0 - - - 0 0 1, f 5;
+#X obj 113 519 hsl 162 19 0.01 1 1 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 110 546 5 0 0 0 - - - 0;
 #X obj 491 433 sel 0 1 2 3;
-#X obj 491 272 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
-#X obj 523 332 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 491 272 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 523 332 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 510 270 clear;
-#X obj 580 135 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 580 135 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 580 159 delay 10000;
-#X floatatom 80 327 0 0 0 1 Elapsed - - 0 0 0;
-#X obj 80 78 bng 40 250 50 0 empty empty Start\ experiment 0 -10 0
-10 #fcfcfc #000000 #000000 1;
-#X obj 98 240 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1 1;
+#X floatatom 80 327 0 0 0 1 Elapsed - - 0;
+#X obj 80 78 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 98 240 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 98 263 metro 1000;
 #X obj 80 297 timer 1 sec;
-#X obj 773 272 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 773 272 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 793 272 clear;
-#X obj 490 135 hradio 15 1 0 4 empty empty empty 0 -6 0 8 #fcfcfc #000000
-#000000 1 1;
+#X obj 490 135 hradio 19 1 0 4 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0;
 #X msg 523 362 2;
 #X obj 511 244 r reset;
 #X obj 793 244 r reset;
 #X obj 773 433 sel 0 1 2;
-#X obj 1032 272 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 1032 272 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 1052 272 clear;
 #X obj 1052 244 r reset;
-#X obj 805 332 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 805 332 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 89 440 readsf~;
 #X obj 90 370 r soundfile;
 #X obj 491 671 s soundfile;
 #X obj 773 671 s soundfile;
 #X obj 135 492 s doneplaying;
-#X obj 135 470 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 135 470 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 490 190 gate 3;
 #X obj 1032 671 s soundfile;
 #X obj 1032 433 sel 0 1 2;
@@ -57,8 +46,7 @@
 #X msg 1051 552 open sounds/music2.aiff;
 #X msg 1069 585 open sounds/music3.aiff;
 #X msg 805 362 3;
-#X obj 1064 332 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 1064 332 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 1064 362 0;
 #X obj 523 396 s to-gate;
 #X obj 805 396 s to-gate;
@@ -67,12 +55,9 @@
 #X msg 180 399 stop;
 #X obj 180 370 r reset;
 #X obj 20 440 print;
-#X obj 565 464 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
-#X obj 832 464 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
-#X obj 1092 464 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000 1;
+#X obj 565 464 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 832 464 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1092 464 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 580 108 r playnext;
 #X obj 565 486 s playnext;
 #X obj 832 486 s playnext;
@@ -86,33 +71,19 @@
 #X obj 1032 302 urn 3;
 #N canvas 213 226 525 492 save-file 0;
 #X msg 71 241 clear;
-#X obj 40 240 bng 19 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1;
+#X obj 40 240 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 70 292 text define -k soundlist;
-#A set 23:01:47 \; open sounds/woodblock.wav \; open sounds/sinetone.wav
-\; open sounds/guitar.wav \; open sounds/guiro.wav \; 23:00:13 \; open
-sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav
-\; open sounds/guiro.wav \; open sounds/guiro.wav \; open sounds/guiro.wav
-\; open sounds/guiro.wav \; open sounds/guiro.wav \; sounds/guiro.wav
-\; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav
-\; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; guiro.wav
-\; asdf \; 52 \; 50 \; 47 \; 44 \; 39 \; 35 \; 32 \; 30 \; 26 \; 24
-\; 22 \; 21 \; 19 \; 17 \; 12 \; 7 \; 4 \; 1 \; 0 \; 1 \; 3 \; 5 \;
-6 \; 7 \; 5 \; 3 \; 0 \; -5 \; -8 \; -9 \; -8 \; -6 \; -4 \; -2 \;
-0 \; 2 \; 5 \; 7 \; 9 \; 11 \; 12 \; 11 \; 10 \; 9 \; 7 \; 5 \; 4 \;
-2 \; 1 \;;
+#A set 23:01:47 \; open sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav \; open sounds/guiro.wav \; 23:00:13 \; open sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; guiro.wav \; asdf \; 52 \; 50 \; 47 \; 44 \; 39 \; 35 \; 32 \; 30 \; 26 \; 24 \; 22 \; 21 \; 19 \; 17 \; 12 \; 7 \; 4 \; 1 \; 0 \; 1 \; 3 \; 5 \; 6 \; 7 \; 5 \; 3 \; 0 \; -5 \; -8 \; -9 \; -8 \; -6 \; -4 \; -2 \; 0 \; 2 \; 5 \; 7 \; 9 \; 11 \; 12 \; 11 \; 10 \; 9 \; 7 \; 5 \; 4 \; 2 \; 1 \;;
 #X obj 330 223 text insert soundlist;
 #X obj 356 154 r soundfile;
 #X obj 330 191 list append;
 #X obj 70 91 hcs/ISOdate;
 #X obj 330 91 hcs/ISOtime;
 #X obj 70 41 loadbang;
-#X obj 70 69 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1;
-#X obj 330 69 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1;
-#X symbolatom 330 116 0 0 0 0 - - - 0 0 1;
-#X symbolatom 70 116 0 0 0 0 - - - 0 0 1;
+#X obj 70 69 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 330 69 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X symbolatom 330 116 0 0 0 0 - - - 0;
+#X symbolatom 70 116 0 0 0 0 - - - 0;
 #X obj 330 41 r reset;
 #X msg 120 240 write soundlist.txt;
 #X connect 0 0 2 0;
@@ -129,6 +100,8 @@ sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav
 #X connect 14 0 2 0;
 #X restore 76 692 pd save-file;
 #X text 670 160 Wait 10 seconds between each sound example;
+#X obj 556 362 s playnext;
+#X obj 839 362 s playnext;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 3 0;
@@ -140,6 +113,7 @@ sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav
 #X connect 4 4 56 0;
 #X connect 5 0 67 0;
 #X connect 6 0 18 0;
+#X connect 6 0 72 0;
 #X connect 7 0 67 0;
 #X connect 8 0 9 0;
 #X connect 9 0 32 1;
@@ -161,6 +135,7 @@ sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav
 #X connect 23 0 69 0;
 #X connect 24 0 23 0;
 #X connect 25 0 46 0;
+#X connect 25 0 73 0;
 #X connect 26 0 1 0;
 #X connect 26 1 31 0;
 #X connect 27 0 36 0;
