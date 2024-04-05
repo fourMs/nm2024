@@ -1,89 +1,131 @@
-#N canvas 360 175 3840 1980 12;
+#N canvas 11 129 1348 764 12;
 #X obj 90 599 dac~;
 #X obj 89 571 *~;
-#X obj 113 519 hsl 162 19 0.01 1 1 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X floatatom 110 546 5 0 0 0 - - - 0;
+#X obj 113 519 hsl 162 19 0.01 1 1 0 empty empty empty -2 -10 0 12
+#fcfcfc #000000 #000000 2600 1 0 1;
+#X floatatom 110 546 5 0 0 0 - - - 0 0 1, f 5;
 #X obj 491 433 sel 0 1 2 3;
-#X obj 491 272 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 523 332 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 491 272 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
+#X obj 523 332 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
 #X msg 510 270 clear;
-#X obj 580 135 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 580 135 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
 #X obj 580 159 delay 10000;
-#X floatatom 80 327 0 0 0 1 Elapsed - - 0;
-#X obj 80 78 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 98 240 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 80 327 0 0 0 1 Elapsed - - 0 0 1;
+#X obj 80 78 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
+#000000 1;
+#X obj 98 240 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
+#000000 1 1 1;
 #X obj 98 263 metro 1000;
 #X obj 80 297 timer 1 sec;
-#X obj 773 272 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X msg 793 272 clear;
-#X obj 490 135 hradio 19 1 0 4 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0;
+#X obj 1028 274 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
+#X msg 1048 274 clear;
+#X obj 490 135 hradio 19 1 0 4 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 0 1;
 #X msg 523 362 2;
 #X obj 511 244 r reset;
-#X obj 793 244 r reset;
-#X obj 773 433 sel 0 1 2;
-#X obj 1032 272 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X msg 1052 272 clear;
-#X obj 1052 244 r reset;
-#X obj 805 332 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1048 246 r reset;
+#X obj 1028 435 sel 0 1 2;
+#X obj 750 278 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
+#X msg 770 278 clear;
+#X obj 770 250 r reset;
+#X obj 1060 334 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
 #X obj 89 440 readsf~;
 #X obj 90 370 r soundfile;
 #X obj 491 671 s soundfile;
-#X obj 773 671 s soundfile;
-#X obj 135 492 s doneplaying;
-#X obj 135 470 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1028 673 s soundfile;
+#X obj 135 470 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
 #X obj 490 190 gate 3;
-#X obj 1032 671 s soundfile;
-#X obj 1032 433 sel 0 1 2;
+#X obj 750 677 s soundfile;
+#X obj 750 439 sel 0 1 2;
 #X msg 490 522 open sounds/guiro.wav;
 #X obj 90 401 t 1 a;
 #X msg 509 552 open sounds/guitar.wav;
 #X msg 528 585 open sounds/sinetone.wav;
 #X msg 546 615 open sounds/woodblock.wav;
-#X msg 772 522 open sounds/laugh.wav;
-#X msg 792 552 open sounds/yawn.wav;
-#X msg 810 585 open sounds/clapping.wav;
-#X msg 1032 522 open sounds/music1.aiff;
-#X msg 1051 552 open sounds/music2.aiff;
-#X msg 1069 585 open sounds/music3.aiff;
-#X msg 805 362 3;
-#X obj 1064 332 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X msg 1064 362 0;
+#X obj 782 338 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
 #X obj 523 396 s to-gate;
-#X obj 805 396 s to-gate;
-#X obj 1064 396 s to-gate;
+#X obj 1060 398 s to-gate;
+#X obj 782 402 s to-gate;
 #X obj 490 108 r to-gate;
 #X msg 180 399 stop;
 #X obj 180 370 r reset;
 #X obj 20 440 print;
-#X obj 565 464 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 832 464 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 1092 464 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 565 464 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
+#X obj 1087 466 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
+#X obj 810 470 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
 #X obj 580 108 r playnext;
 #X obj 565 486 s playnext;
-#X obj 832 486 s playnext;
-#X obj 1092 486 s playnext;
+#X obj 1087 488 s playnext;
+#X obj 810 492 s playnext;
 #X obj 117 214 s playnext;
 #X obj 135 186 s to-gate;
 #X obj 154 155 s reset;
 #X obj 80 125 t b 1 b 1 b;
 #X obj 491 302 urn 4;
-#X obj 773 302 urn 3;
-#X obj 1032 302 urn 3;
-#N canvas 213 226 525 492 save-file 0;
+#X obj 1028 304 urn 3;
+#X obj 750 308 urn 3;
+#N canvas 1380 11 525 492 save-file 1;
 #X msg 71 241 clear;
-#X obj 40 240 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 40 240 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
 #X obj 70 292 text define -k soundlist;
-#A set 23:01:47 \; open sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav \; open sounds/guiro.wav \; 23:00:13 \; open sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; open sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; sounds/guiro.wav \; guiro.wav \; asdf \; 52 \; 50 \; 47 \; 44 \; 39 \; 35 \; 32 \; 30 \; 26 \; 24 \; 22 \; 21 \; 19 \; 17 \; 12 \; 7 \; 4 \; 1 \; 0 \; 1 \; 3 \; 5 \; 6 \; 7 \; 5 \; 3 \; 0 \; -5 \; -8 \; -9 \; -8 \; -6 \; -4 \; -2 \; 0 \; 2 \; 5 \; 7 \; 9 \; 11 \; 12 \; 11 \; 10 \; 9 \; 7 \; 5 \; 4 \; 2 \; 1 \;;
+#A set open sounds/yawn_3.wav \; open sounds/laugh_1.wav \; open sounds/applause.wav
+\; open sounds/24kmagic.wav \; open sounds/superstition.wav \; open
+sounds/gimme.wav \; open sounds/guitar.wav \; open sounds/woodblock.wav
+\; open sounds/sinetone.wav \; open sounds/guiro.wav \; 17:58:09 \;
+open sounds/yawn_3.wav \; open sounds/applause.wav \; open sounds/laugh_1.wav
+\; open sounds/gimme.wav \; open sounds/24kmagic.wav \; open sounds/superstition.wav
+\; open sounds/sinetone.wav \; open sounds/guiro.wav \; open sounds/guitar.wav
+\; open sounds/woodblock.wav \; 17:42:30 \; open sounds/applause.wav
+\; open sounds/yawn_3.wav \; open sounds/laugh_1.wav \; open sounds/gimme.wav
+\; open sounds/superstition.wav \; open sounds/24kmagic.wav \; open
+sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guiro.wav
+\; open sounds/guitar.wav \; 17:31:25 \; open sounds/yawn_3.wav \;
+open sounds/laugh_1.wav \; open sounds/applause.wav \; open sounds/24kmagic.wav
+\; open sounds/superstition.wav \; open sounds/gimme.wav \; open sounds/guiro.wav
+\; open sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav
+\; 17:19:37 \; open sounds/laugh_1.wav \; open sounds/applause.wav
+\; open sounds/yawn_3.wav \; open sounds/gimme.wav \; open sounds/superstition.wav
+\; open sounds/24kmagic.wav \; open sounds/woodblock.wav \; open sounds/guiro.wav
+\; open sounds/sinetone.wav \; open sounds/guitar.wav \; 17:01:09 \;
+open sounds/laugh_1.wav \; open sounds/applause.wav \; open sounds/yawn_3.wav
+\; open sounds/24kmagic.wav \; open sounds/gimme.wav \; open sounds/superstition.wav
+\; open sounds/woodblock.wav \; open sounds/sinetone.wav \; open sounds/guiro.wav
+\; open sounds/guitar.wav \; 16:33:04 \; open sounds/yawn_3.wav \;
+open sounds/applause.wav \; open sounds/laugh_1.wav \; open sounds/24kmagic.wav
+\; open sounds/superstition.wav \; open sounds/gimme.wav \; open sounds/guitar.wav
+\; open sounds/guiro.wav \; open sounds/sinetone.wav \; open sounds/woodblock.wav
+\; 12:01:11 \; open sounds/gimme.wav \; open sounds/24kmagic.wav \;
+open sounds/superstition.wav \; open sounds/yawn_3.wav \; open sounds/applause.wav
+\; open sounds/laugh_1.wav \; open sounds/sinetone.wav \; open sounds/guitar.wav
+\; open sounds/woodblock.wav \; open sounds/guiro.wav \; 10:34:50 \;
+open sounds/gimme.wav \; open sounds/24kmagic.wav \; open sounds/superstition.wav
+\; open sounds/applause.wav \; open sounds/laugh_1.wav \; open sounds/yawn_3.wav
+\; open sounds/guiro.wav \; open sounds/guitar.wav \; open sounds/sinetone.wav
+\; open sounds/woodblock.wav \; 10:27:00 \;;
 #X obj 330 223 text insert soundlist;
 #X obj 356 154 r soundfile;
 #X obj 330 191 list append;
 #X obj 70 91 hcs/ISOdate;
 #X obj 330 91 hcs/ISOtime;
 #X obj 70 41 loadbang;
-#X obj 70 69 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 330 69 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X symbolatom 330 116 0 0 0 0 - - - 0;
-#X symbolatom 70 116 0 0 0 0 - - - 0;
+#X obj 70 69 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
+#000000 1;
+#X obj 330 69 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000 1;
+#X symbolatom 330 116 0 0 0 0 - - - 0 0 1;
+#X symbolatom 70 116 0 0 0 0 - - - 0 0 1;
 #X obj 330 41 r reset;
 #X msg 120 240 write soundlist.txt;
 #X connect 0 0 2 0;
@@ -101,83 +143,114 @@
 #X restore 76 692 pd save-file;
 #X text 670 160 Wait 10 seconds between each sound example;
 #X obj 556 362 s playnext;
-#X obj 839 362 s playnext;
+#X obj 820 370 s playnext;
+#X msg 1065 587 open sounds/applause.wav;
+#X msg 1047 554 open sounds/yawn_3.wav;
+#X msg 1027 524 open sounds/laugh_1.wav;
+#X msg 750 528 open sounds/24kmagic.wav;
+#X msg 769 558 open sounds/gimme.wav;
+#X msg 787 591 open sounds/superstition.wav;
+#X obj 135 492 s playnext;
+#X msg 782 368 3;
+#X msg 1060 364 0;
+#X obj 280 110 bng 20 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000 1;
+#X msg 280 137 open sounds/woodblock.wav;
+#X obj 280 200 readsf~;
+#X obj 280 260 *~;
+#X obj 280 289 dac~;
+#X obj 140 570 s master_gain;
+#X obj 300 230 r master_gain;
+#X text 280 80 Soundcheck;
+#X text 80 50 Start;
+#X obj 280 167 t 1 a;
+#X obj 330 167 print soundcheck;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 3 0;
 #X connect 3 0 1 1;
-#X connect 4 0 35 0;
-#X connect 4 1 37 0;
-#X connect 4 2 38 0;
-#X connect 4 3 39 0;
-#X connect 4 4 56 0;
-#X connect 5 0 67 0;
+#X connect 3 0 79 0;
+#X connect 4 0 34 0;
+#X connect 4 1 36 0;
+#X connect 4 2 37 0;
+#X connect 4 3 38 0;
+#X connect 4 4 47 0;
+#X connect 5 0 58 0;
 #X connect 6 0 18 0;
-#X connect 6 0 72 0;
-#X connect 7 0 67 0;
+#X connect 6 0 63 0;
+#X connect 7 0 58 0;
 #X connect 8 0 9 0;
-#X connect 9 0 32 1;
-#X connect 11 0 66 0;
+#X connect 9 0 31 1;
+#X connect 11 0 57 0;
 #X connect 12 0 13 0;
 #X connect 13 0 14 1;
 #X connect 14 0 10 0;
-#X connect 15 0 68 0;
-#X connect 16 0 68 0;
-#X connect 17 0 32 0;
-#X connect 18 0 49 0;
+#X connect 15 0 59 0;
+#X connect 16 0 59 0;
+#X connect 17 0 31 0;
+#X connect 18 0 40 0;
 #X connect 19 0 7 0;
 #X connect 20 0 16 0;
-#X connect 21 0 40 0;
-#X connect 21 1 41 0;
-#X connect 21 2 42 0;
-#X connect 21 3 57 0;
-#X connect 22 0 69 0;
-#X connect 23 0 69 0;
+#X connect 21 0 67 0;
+#X connect 21 1 66 0;
+#X connect 21 2 65 0;
+#X connect 21 3 48 0;
+#X connect 22 0 60 0;
+#X connect 23 0 60 0;
 #X connect 24 0 23 0;
-#X connect 25 0 46 0;
 #X connect 25 0 73 0;
 #X connect 26 0 1 0;
-#X connect 26 1 31 0;
-#X connect 27 0 36 0;
-#X connect 27 0 55 0;
-#X connect 31 0 30 0;
-#X connect 32 0 5 0;
-#X connect 32 1 15 0;
-#X connect 32 2 22 0;
-#X connect 34 0 43 0;
-#X connect 34 1 44 0;
-#X connect 34 2 45 0;
-#X connect 34 3 58 0;
-#X connect 35 0 28 0;
-#X connect 36 0 26 0;
-#X connect 36 1 26 0;
+#X connect 26 1 30 0;
+#X connect 27 0 35 0;
+#X connect 27 0 46 0;
+#X connect 30 0 71 0;
+#X connect 31 0 5 0;
+#X connect 31 1 22 0;
+#X connect 31 2 15 0;
+#X connect 33 0 68 0;
+#X connect 33 1 69 0;
+#X connect 33 2 70 0;
+#X connect 33 3 49 0;
+#X connect 34 0 28 0;
+#X connect 35 0 26 0;
+#X connect 35 1 26 0;
+#X connect 36 0 28 0;
 #X connect 37 0 28 0;
 #X connect 38 0 28 0;
-#X connect 39 0 28 0;
-#X connect 40 0 29 0;
-#X connect 41 0 29 0;
-#X connect 42 0 29 0;
-#X connect 43 0 33 0;
-#X connect 44 0 33 0;
-#X connect 45 0 33 0;
-#X connect 46 0 50 0;
-#X connect 47 0 48 0;
-#X connect 48 0 51 0;
-#X connect 52 0 17 0;
-#X connect 53 0 26 0;
-#X connect 54 0 53 0;
-#X connect 56 0 60 0;
-#X connect 57 0 61 0;
-#X connect 58 0 62 0;
-#X connect 59 0 8 0;
-#X connect 66 0 14 0;
-#X connect 66 1 12 0;
-#X connect 66 2 63 0;
-#X connect 66 3 64 0;
-#X connect 66 4 65 0;
-#X connect 67 0 4 0;
-#X connect 67 1 6 0;
-#X connect 68 0 21 0;
-#X connect 68 1 25 0;
-#X connect 69 0 34 0;
-#X connect 69 1 47 0;
+#X connect 39 0 72 0;
+#X connect 39 0 64 0;
+#X connect 43 0 17 0;
+#X connect 44 0 26 0;
+#X connect 45 0 44 0;
+#X connect 47 0 51 0;
+#X connect 48 0 52 0;
+#X connect 49 0 53 0;
+#X connect 50 0 8 0;
+#X connect 57 0 14 0;
+#X connect 57 1 12 0;
+#X connect 57 2 54 0;
+#X connect 57 3 55 0;
+#X connect 57 4 56 0;
+#X connect 58 0 4 0;
+#X connect 58 1 6 0;
+#X connect 59 0 21 0;
+#X connect 59 1 25 0;
+#X connect 60 0 33 0;
+#X connect 60 1 39 0;
+#X connect 65 0 29 0;
+#X connect 66 0 29 0;
+#X connect 67 0 29 0;
+#X connect 68 0 32 0;
+#X connect 69 0 32 0;
+#X connect 70 0 32 0;
+#X connect 72 0 42 0;
+#X connect 73 0 41 0;
+#X connect 74 0 75 0;
+#X connect 75 0 83 0;
+#X connect 75 0 84 0;
+#X connect 76 0 77 0;
+#X connect 77 0 78 0;
+#X connect 77 0 78 1;
+#X connect 80 0 77 1;
+#X connect 83 0 76 0;
+#X connect 83 1 76 0;
